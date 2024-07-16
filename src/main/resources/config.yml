@@ -1,0 +1,82 @@
+# karmaapi Configuration File
+
+# Points settings for various actions
+points:
+  join: 1        # Points awarded for joining the server
+  quit: 1        # Points deducted for quitting the server
+  good_work: 5   # Points awarded for a good action
+  bad_work: 5    # Points deducted for a bad action
+
+# Announcement messages
+announcement:
+  good: "&a{player} has earned {points} Punya points for {action}."
+  bad: "&c{player} has earned {points} Pap points for {action}."
+
+# Placeholder settings
+placeholders:
+  punya: "karma_punya"
+  pap: "karma_pap"
+
+# Database settings
+database:
+  type: sqlite      # Database type (sqlite or mysql)
+  sqlite:
+    file: "database.db"  # SQLite database file name
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "karma"
+    username: "root"
+    password: ""
+
+# GUI settings
+gui:
+  config:
+    title: "&6Karma Config"
+    size: 27
+    items:
+      example_setting:
+        slot: 13
+        item: "PAPER"
+        name: "&aExample Setting"
+        lore:
+          - "&7Description of the setting."
+  leaderboard:
+    punya:
+      title: "&aPunya Leaderboard"
+      size: 54
+    pap:
+      title: "&cPap Leaderboard"
+      size: 54
+
+# Commands settings
+commands:
+  help:
+    description: "Show all Karma commands"
+  point:
+    punya:
+      description: "Show your Punya points"
+    pap:
+      description: "Show your Pap points"
+  leaderboard:
+    punya:
+      description: "Show Punya leaderboard"
+    pap:
+      description: "Show Pap leaderboard"
+  config:
+    description: "Open config GUI"
+  reload:
+    description: "Reload the plugin"
+  set:
+    description: "Set points for a player"
+  restart:
+    description: "Restart the points system"
+
+# Permissions settings
+permissions:
+  admin:
+    description: "Admin commands for karmaapi"
+    default: "op"
+  use:
+    description: "User commands for karmaapi"
+    default: "true"

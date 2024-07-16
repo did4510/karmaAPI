@@ -1,4 +1,15 @@
 name: karmaAPI
-version: '${project.version}'
+version: 1.0-SNAPSHOT
 main: me.darsh.karmaapi.KarmaAPI
-api-version: '1.19'
+api-version: 1.19
+commands:
+  karma:
+    description: Karma plugin main command
+    usage: /karma help
+permissions:
+  karma.admin:
+    description: Admin commands for karmaapi
+    default: op
+  karma.use:
+    description: User commands for karmaapi
+    default: true
